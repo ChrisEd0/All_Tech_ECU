@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    font-family: 'Courier Prime', monospace;
+}
+
+
+/* NAVBAR */
+.navbar {
+    background: #0B0B0B;
+    padding: 10px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #D4AF37;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* overlay oscuro */
+.slide::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* texto */
+.content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+/* botones */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.btn {
+    background: #D4AF37;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* SERVICIOS */
+.servicios {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.logo {
+    height: 75px;
+    width: auto;
+}
+
+
+.contacto h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* contenedor */
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* info */
+.contacto-info {
+    max-width: 350px;
+    text-align: left;
+}
+
+.contacto-info p {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+.contacto-info i {
+    color: #D4AF37;
+    margin-right: 10px;
+}
+
+/* redes */
+.redes {
+    margin-top: 20px;
+}
+
+.redes a {
+    color: white;
+    font-size: 22px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #D4AF37;
+}
+
+/* mapa */
+.mapa {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* enlace activo del menú */
+.menu a.activo {
+    color: #D4AF37;
+    border-bottom: 2px solid #D4AF37;
+}
+
+/* 🔳 HEADER NEGRO */
+.contacto-header {
+    background: #222222;
+    color: white;
+    text-align: center;
+    padding: 25px 20px 15px; /* 🔽 menos alto */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* detalle pro */
+}
+
+.contacto-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* ⚪ CUERPO BLANCO */
+.contacto-body {
+    background: white;
+    color: black;
+    padding: 60px 20px;
+}
+
+/* ajustar textos en blanco */
+.contacto-body .contacto-info i {
+    color: #D4AF37;
+}
+
+/* redes en fondo blanco */
+.contacto-body .redes a {
+    color: black;
+}
+
+.contacto-body .redes a:hover {
+    color: #D4AF37;
+}
+
+.proyectos-body {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.banner-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.banner {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* GitHub */
+.github {
+    background-color: #24292e;
+}
+
+.github:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+/* GrabCAD */
+.grabcad {
+    background-color: #1e90ff;
+}
+
+.grabcad:hover {
+    background-color: #187bcd;
+    transform: translateY(-3px);
+}
